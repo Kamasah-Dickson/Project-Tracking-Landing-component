@@ -1,0 +1,158 @@
+main{
+    header{
+        margin-top: 2rem;
+        position: absolute;
+        width:100%;
+        z-index: 99;
+        
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width:85%;
+            margin: 0 auto;
+            max-width: 1200px;
+            z-index: 99;
+            .logo{
+                width:25px;
+            }
+            
+            .desktop-links{
+                display: none;
+            }
+            .mobile-links{
+                z-index:1;
+            }
+            .menu{
+                position: relative;
+            }
+            .mobile-nav{
+                ul{
+                    background-color: #fff;
+                    box-shadow: 0px 1px 15px 1px rgba(0,0,0,0.4);
+                    padding:1.5rem 1.6rem; //continue here;
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top:5rem;
+                    left:0;
+                    right:0;
+                    width:85%;
+                    margin:0 auto;
+                    display: none;
+                    li{
+                        width:100%;
+                        
+                        text-align:center;
+                        line-height: 40px;
+                        list-style: none;
+                        a{
+                            text-decoration: none;
+                            color:$very-Dark-Blue;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            font-size: 1rem;
+                            transition: underline 0.3s ease-in-out;
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                            
+                        }
+                    }
+                    .login{
+                        border-top: 1px solid $grayish-Blue;
+                        margin-top:1rem;
+                        padding-top: 1rem;
+                        a{
+                            color:$grayish-Blue;
+                            transition: 0.3s ease-in-out;
+                            &:hover{
+                                color:$very-Dark-Blue;
+                            }
+                            
+                        }
+                    }
+                    
+                }
+                .active-nav{
+                    display:block;
+                }
+            }
+            
+        }
+        
+    }
+    
+    footer{
+        text-align: center;
+        font-size: .9rem;
+        font-weight: 700;
+        margin-top: 1rem;
+        padding:1rem .5rem;
+        background-color: $very-Dark-Blue;
+        color:#fff;
+        a{
+            color:$grayish-Blue;
+        }
+        
+    }
+    
+}
+
+
+@media screen and (min-width:768px) {
+    main{
+        header{
+            .container{
+                width:85%;
+                .desktop-links{
+                    display: block;
+                    ul{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        li{
+                            list-style: none;
+                            list-style: none;
+                            margin-left: 2.4rem;
+                            &:last-child{
+                                a:hover{
+                                    color:$grayish-Blue;
+                                    cursor: pointer;
+                                }
+                            }
+                            a{
+                                text-decoration: none;
+                                font-size: .8rem;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                color:$very-Dark-Blue;
+                                transition:.3s ease;
+                                &:hover{
+                                    text-decoration: underline;
+                                    cursor: pointer;
+                                }
+                            }   
+                        }
+                        
+                        .circle{
+                            width: 6px;
+                            height: 6px;
+                            background-color: $grayish-Blue;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                .mobile-links{
+                    display: none;
+                }
+                .menu{
+                    display: none;
+                }
+                
+            }
+            
+        }
+        
+    }
+}
